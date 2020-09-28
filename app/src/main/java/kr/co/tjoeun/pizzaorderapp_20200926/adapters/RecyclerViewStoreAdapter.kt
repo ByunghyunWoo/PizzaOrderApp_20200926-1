@@ -25,7 +25,7 @@ class RecyclerViewStoreAdapter(
     val mPizzaStoreList = ArrayList<Store>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
-        val view = LayoutInflater.from(mContext).inflate(R.layout.store_list_item,parent,false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.store_recycler_item,parent,false)  // 너였냐?
         return RecyclerViewHolder(view)
     }
 
