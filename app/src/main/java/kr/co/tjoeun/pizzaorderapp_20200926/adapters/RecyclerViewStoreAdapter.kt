@@ -2,6 +2,7 @@ package kr.co.tjoeun.pizzaorderapp_20200926.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.util.Size
 
 import android.view.LayoutInflater
 import android.view.View
@@ -23,7 +24,7 @@ class RecyclerViewStoreAdapter(
     val mContext: Context,
     val resId:Int,
     val mStore:ArrayList<Store>):RecyclerView.Adapter<RecyclerViewStoreAdapter.RecyclerViewHolder>() {
-    val mPizzaStoreList = ArrayList<Store>()
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val view = LayoutInflater.from(mContext).inflate(R.layout.store_recycler_item,parent,false)  // 너였냐?
@@ -31,7 +32,8 @@ class RecyclerViewStoreAdapter(
     }
 
     override fun getItemCount(): Int {
-        return 4   // 흠..?  표시해줄 어레이리스트의 사이즈
+
+        return 4   // 흠..?  표시해줄 어레이리스트의 사이즈? 내가 입력한 데이터의 크기를 어떻게 여기 반환해주느냐?? 어떻게 구함
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
