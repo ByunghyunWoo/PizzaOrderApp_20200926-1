@@ -25,6 +25,7 @@ class RecyclerViewStoreAdapter(
     val resId:Int,
     val mStore:ArrayList<Store>):RecyclerView.Adapter<RecyclerViewStoreAdapter.RecyclerViewHolder>() {
 
+//    val items:ArrayList<Store> = arrayListOf(Store())     뭔가 느낌이 오는 느낌
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val view = LayoutInflater.from(mContext).inflate(R.layout.store_recycler_item,parent,false)  // 너였냐?
