@@ -17,6 +17,7 @@ import kr.co.tjoeun.pizzaorderapp_20200926.R
 import kr.co.tjoeun.pizzaorderapp_20200926.ViewStoreDetailActivity
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 import kr.co.tjoeun.pizzaorderapp_20200926.fragments.PizzaStoreRecyclerViewFragment
+import java.nio.file.Files.size
 
 class RecyclerViewStoreAdapter(
     val mContext: Context,
@@ -30,7 +31,7 @@ class RecyclerViewStoreAdapter(
     }
 
     override fun getItemCount(): Int {
-        return 4   // 흠..?
+        return 4   // 흠..?  표시해줄 어레이리스트의 사이즈
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
@@ -49,6 +50,8 @@ class RecyclerViewStoreAdapter(
             brandNameTxt?.text = storeData.brandName
             Glide.with(mContext).load(storeData.logoUrl).into(logoImg!!)
         }
+
+
 
 
 
