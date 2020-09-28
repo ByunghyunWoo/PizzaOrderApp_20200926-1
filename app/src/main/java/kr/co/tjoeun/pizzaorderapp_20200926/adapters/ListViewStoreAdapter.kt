@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import kr.co.tjoeun.pizzaorderapp_20200926.R
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 
-class StoreAdapter(
+class ListViewStoreAdapter(
     val mContext:Context,
     resId:Int,
     val mList:List<Store>) : ArrayAdapter<Store>(mContext, resId, mList) {

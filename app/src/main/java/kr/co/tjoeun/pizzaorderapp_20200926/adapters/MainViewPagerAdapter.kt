@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import kr.co.tjoeun.pizzaorderapp_20200926.fragments.MyProfileFragment
 import kr.co.tjoeun.pizzaorderapp_20200926.fragments.PizzaStoreListViewFragment
+import kr.co.tjoeun.pizzaorderapp_20200926.fragments.PizzaStoreRecyclerViewFragment
 
 class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
@@ -19,7 +20,7 @@ class MainViewPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {
         return when(position) {
-            0 -> PizzaStoreListViewFragment()
+            0 -> PizzaStoreRecyclerViewFragment()
             else -> MyProfileFragment()
         }
     }

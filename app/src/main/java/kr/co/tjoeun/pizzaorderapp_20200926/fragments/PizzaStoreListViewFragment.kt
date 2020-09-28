@@ -9,14 +9,14 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_pizza_store_list_view.*
 import kr.co.tjoeun.pizzaorderapp_20200926.R
 import kr.co.tjoeun.pizzaorderapp_20200926.ViewStoreDetailActivity
-import kr.co.tjoeun.pizzaorderapp_20200926.adapters.StoreAdapter
+import kr.co.tjoeun.pizzaorderapp_20200926.adapters.ListViewStoreAdapter
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 
 class PizzaStoreListViewFragment : Fragment() {
 
     val mPizzaStoreList = ArrayList<Store>()
 
-    lateinit var mStoreAdapter : StoreAdapter
+    lateinit var mListViewStoreAdapter : ListViewStoreAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -34,8 +34,8 @@ class PizzaStoreListViewFragment : Fragment() {
         mPizzaStoreList.add(Store("미스터피자", "1577-0077", "https://post-phinf.pstatic.net/MjAxODEyMDVfMzYg/MDAxNTQzOTYxOTA4NjM3.8gsStnhxz7eEc9zpt5nmSRZmI-Pzpl4NJvHYU-Dlgmcg.7Vpgk0lopJ5GoTav3CUDqmXi2-_67S5AXD0AGbbR6J4g.JPEG/IMG_1641.jpg?type=w1200"))
         mPizzaStoreList.add(Store("도미노피자", "1577-3082", "https://pbs.twimg.com/profile_images/1098371010548555776/trCrCTDN_400x400.png"))
 
-        mStoreAdapter = StoreAdapter(context!!, R.layout.store_list_item, mPizzaStoreList)
-        pizzaStoreListView.adapter = mStoreAdapter
+        mListViewStoreAdapter = ListViewStoreAdapter(context!!, R.layout.store_list_item, mPizzaStoreList)
+        pizzaStoreListView.adapter = mListViewStoreAdapter
 
 
         pizzaStoreListView.setOnItemClickListener { parent, view, position, id ->
