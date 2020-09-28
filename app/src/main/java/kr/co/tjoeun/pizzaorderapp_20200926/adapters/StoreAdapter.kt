@@ -34,7 +34,6 @@ class StoreAdapter(
         val storeData = mList[position]
 
         brandNameTxt.text = storeData.brandName
-
         Glide.with(mContext).load(storeData.logoUrl).into(logoImg)
 
         return row

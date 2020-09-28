@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_pizza_store.*
+import kotlinx.android.synthetic.main.fragment_pizza_store_list_view.*
 import kr.co.tjoeun.pizzaorderapp_20200926.R
 import kr.co.tjoeun.pizzaorderapp_20200926.ViewStoreDetailActivity
 import kr.co.tjoeun.pizzaorderapp_20200926.adapters.StoreAdapter
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 
-class PizzaStoreFragment : Fragment() {
+class PizzaStoreListViewFragment : Fragment() {
 
     val mPizzaStoreList = ArrayList<Store>()
 
@@ -23,7 +23,7 @@ class PizzaStoreFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_pizza_store, container, false)
+        return inflater.inflate(R.layout.fragment_pizza_store_list_view, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
