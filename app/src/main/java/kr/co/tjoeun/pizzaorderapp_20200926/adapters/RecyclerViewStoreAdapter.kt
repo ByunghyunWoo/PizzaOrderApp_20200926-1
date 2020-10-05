@@ -1,6 +1,5 @@
 package kr.co.tjoeun.pizzaorderapp_20200926.adapters
 
-import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
