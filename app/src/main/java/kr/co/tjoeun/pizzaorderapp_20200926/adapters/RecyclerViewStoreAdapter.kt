@@ -63,6 +63,7 @@ class RecyclerViewStoreAdapter(
         fun bind(storeData: Store, mcontext: Context) {
             brandNameTxt?.text = storeData.brandName
             Glide.with(mContext).load(storeData.logoUrl).into(logoImg!!)
+            itemView.setOnClickListener { itemClick(storeData) }
         }
     }
 }
