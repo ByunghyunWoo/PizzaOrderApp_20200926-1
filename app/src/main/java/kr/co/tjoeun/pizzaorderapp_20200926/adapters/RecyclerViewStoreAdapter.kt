@@ -25,7 +25,7 @@ class RecyclerViewStoreAdapter(
     val resId:Int,
     val mStore:ArrayList<Store>):RecyclerView.Adapter<RecyclerViewStoreAdapter.RecyclerViewHolder>() {
 
-//    val items:ArrayList<Store> = arrayListOf(Store())     뭔가 느낌이 오는 느낌
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         val view = LayoutInflater.from(mContext).inflate(R.layout.store_recycler_item,parent,false)  // 너였냐?
@@ -34,7 +34,8 @@ class RecyclerViewStoreAdapter(
 
     override fun getItemCount(): Int {
 
-        return 4   // 흠..?  표시해줄 어레이리스트의 사이즈? 내가 입력한 데이터의 크기를 어떻게 여기 반환해주느냐?? 어떻게 구함
+
+        return mStore.size   // ? 개간단 ㅋㅋ
     }
 
     override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
