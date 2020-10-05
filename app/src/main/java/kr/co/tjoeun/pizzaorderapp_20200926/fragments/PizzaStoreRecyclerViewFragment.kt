@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_pizza_store_recycler_view.*
 import kr.co.tjoeun.pizzaorderapp_20200926.R
+import kr.co.tjoeun.pizzaorderapp_20200926.ViewStoreDetailActivity
 import kr.co.tjoeun.pizzaorderapp_20200926.adapters.RecyclerViewStoreAdapter
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 
@@ -118,6 +119,7 @@ class PizzaStoreRecyclerViewFragment : Fragment() {
         mRecyclerViewStoreAdapter =
             RecyclerViewStoreAdapter(context!!, R.layout.store_recycler_item, mPizzaStoreList)
         pizzaStoreRecyclerView.adapter = mRecyclerViewStoreAdapter
+
 
 
 //        pizzaStoreRecyclerView.setItemClickListener { parent, view, position, id ->
