@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import kotlinx.android.synthetic.main.activity_view_store_detail.*
+import kotlinx.android.synthetic.main.fragment_pizza_store_img.*
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
 
 class ViewStoreDetailActivity : BaseActivity() {
@@ -24,6 +25,15 @@ class ViewStoreDetailActivity : BaseActivity() {
     }
 
     override fun setupEvents() {
+
+        storeLogoImg.setOnClickListener {
+
+            val myIntent = Intent(mContext, pizzaStoreImg::class.java)
+            startActivity(myIntent)
+
+
+        }
+
 
         callBtn.setOnClickListener {
 
