@@ -13,23 +13,19 @@ class ViewStorePhotoActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_view_store_photo)
-        Log.d("확인1","확인1")
         setupEvents()
-        Log.d("확인2","확인2")
         setValues()
-        Log.d("확인3","확인3")
     }
 
     override fun setupEvents() {
-
+        storeFullImg.setOnClickListener {
+            finish()
+        }
     }
 
     override fun setValues() {
         mStore = intent.getSerializableExtra("storeData1") as Store
-        Log.d("확인","?????")
         Glide.with(mContext).load(mStore.logoUrl).into(storeFullImg)
-        Log.d("확인","?????")
-//        storeNameTxt.text = mStore.brandName
-//        phoneNumTxt.text = mStore.phoneNum
+
     }
 }
