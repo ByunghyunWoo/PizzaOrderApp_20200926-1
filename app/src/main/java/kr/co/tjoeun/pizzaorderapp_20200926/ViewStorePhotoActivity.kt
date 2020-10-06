@@ -1,7 +1,6 @@
 package kr.co.tjoeun.pizzaorderapp_20200926
 
 import android.os.Bundle
-import android.util.Log
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.activity_view_store_photo.storeFullImg
 import kr.co.tjoeun.pizzaorderapp_20200926.datas.Store
