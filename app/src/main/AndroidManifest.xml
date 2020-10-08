@@ -26,6 +26,7 @@
         <activity android:name=".MainActivity">
 
         </activity>
+        <activity android:name=".ViewPager2MainActivity"></activity>
     </application>
 
 </manifest>
