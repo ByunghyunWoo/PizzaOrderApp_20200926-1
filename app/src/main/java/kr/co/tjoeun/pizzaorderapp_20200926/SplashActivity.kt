@@ -23,7 +23,7 @@ class SplashActivity : BaseActivity() {
         val myHandler = Handler(Looper.getMainLooper())
 
         myHandler.postDelayed({
-            val myIntent = Intent(mContext, MainActivity::class.java)
+            val myIntent = Intent(mContext, ViewPager2MainActivity::class.java)
             startActivity(myIntent)
 
             finish()

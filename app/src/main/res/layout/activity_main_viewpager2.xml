@@ -12,11 +12,12 @@
         android:layout_height="wrap_content"
         android:background="#FFFFFF"
         app:tabIndicatorColor="#000000"
-        android:id="@+id/mainTabLayout" />
+        android:id="@+id/viewPager2_MainTabLayout" />
 
     <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/mainViewPager"
+        android:id="@+id/viewPager2_MainViewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 </LinearLayout>

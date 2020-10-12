@@ -1,30 +1,30 @@
 package kr.co.tjoeun.pizzaorderapp_20200926.adapters
 
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentPagerAdapter
-import kr.co.tjoeun.pizzaorderapp_20200926.fragments.MyProfileFragment
-import kr.co.tjoeun.pizzaorderapp_20200926.fragments.PizzaStoreRecyclerViewFragment
+import androidx.fragment.app.FragmentActivity
+import androidx.viewpager2.adapter.FragmentStateAdapter
 
-class MainViewPager2Adapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
-    override fun getPageTitle(position: Int): CharSequence? {
+class MainViewPager2Adapter(fa: FragmentActivity) : FragmentStateAdapter(fa) {
 
-        return when(position) {
-            0 -> "피자 주문"
-            else -> "내 정보 설정"
-        }
+    var fragmentList = listOf<Fragment>()
+
+    override fun getItemCount(): Int {
+        return fragmentList.size
+    }
+
+    override fun createFragment(position: Int): Fragment {
+
+        return fragmentList[position]
+//        return when(position) {
+//            0 -> PizzaStoreRecyclerViewFragment()
+//            else -> MyProfileFragment()
+//        }
 
     }
 
-    override fun getItem(position: Int): Fragment {
-        return when(position) {
-            0 -> PizzaStoreRecyclerViewFragment()
-            else -> MyProfileFragment()
-        }
-    }
 
-    override fun getCount(): Int {
-        return 2
-    }
+
+
+
 }
